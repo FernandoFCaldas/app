@@ -1,9 +1,8 @@
 import 'package:ProDreamAPP/models/perfildosplayers.dart';
-import 'package:flutter/material.dart';
 import 'package:ProDreamAPP/models/jogo.dart';
 import '../models/perfildosplayers.dart';
- 
- // aqui eu controlo cada jogo na lista de games
+
+// aqui eu controlo cada jogo na lista de games
 const LISTA_JOGOS = const [
   Jogo(
     id: 'arenaofvalor',
@@ -49,12 +48,12 @@ const LISTA_JOGOS = const [
     id: 'freefire',
     title: 'Free Fire',
     iconAsset: 'assets/icon/iconefreefire.png',
-  ), 
+  ),
   Jogo(
     id: 'hearthstone',
     title: 'Hearthstone',
     iconAsset: 'assets/icon/iconehearthstone.png',
-  ), 
+  ),
   Jogo(
     id: 'lol',
     title: 'League Of Legends',
@@ -90,7 +89,6 @@ const LISTA_JOGOS = const [
     title: 'Valorant',
     iconAsset: 'assets/icon/iconevalorant.png',
   ),
-
 ];
 
 const LISTA_PLAYERS = const [
@@ -108,7 +106,6 @@ const LISTA_PLAYERS = const [
     age: 22,
     email: 'fernando980504@gmail.com',
     phone: '(34)99246-5888',
-
     isTier1: true,
     isTier2: false,
     isTier3: false,
@@ -137,7 +134,6 @@ const LISTA_PLAYERS = const [
     age: 22,
     email: 'fernando980504@gmail.com',
     phone: '(34)99246-5888',
-
     isTier1: true,
     isTier2: false,
     isTier3: false,
@@ -166,7 +162,6 @@ const LISTA_PLAYERS = const [
     age: 22,
     email: 'fernando980504@gmail.com',
     phone: '(34)99246-5888',
-
     isTier1: true,
     isTier2: false,
     isTier3: false,
@@ -195,7 +190,6 @@ const LISTA_PLAYERS = const [
     age: 22,
     email: 'fernando980504@gmail.com',
     phone: '(34)99246-5888',
-
     isTier1: true,
     isTier2: false,
     isTier3: false,
@@ -224,7 +218,6 @@ const LISTA_PLAYERS = const [
     age: 22,
     email: 'fernando980504@gmail.com',
     phone: '(34)99246-5888',
-
     isTier1: true,
     isTier2: false,
     isTier3: false,
@@ -253,7 +246,6 @@ const LISTA_PLAYERS = const [
     age: 22,
     email: 'fernando980504@gmail.com',
     phone: '(34)99246-5888',
-
     isTier1: true,
     isTier2: false,
     isTier3: false,
@@ -282,7 +274,6 @@ const LISTA_PLAYERS = const [
     age: 22,
     email: 'fernando980504@gmail.com',
     phone: '(34)99246-5888',
-
     isTier1: true,
     isTier2: false,
     isTier3: false,
@@ -311,7 +302,6 @@ const LISTA_PLAYERS = const [
     age: 22,
     email: 'fernando980504@gmail.com',
     phone: '(34)99246-5888',
-
     isTier1: true,
     isTier2: false,
     isTier3: false,
@@ -340,7 +330,6 @@ const LISTA_PLAYERS = const [
     age: 22,
     email: 'fernando980504@gmail.com',
     phone: '(34)99246-5888',
-
     isTier1: true,
     isTier2: false,
     isTier3: false,
@@ -369,7 +358,6 @@ const LISTA_PLAYERS = const [
     age: 22,
     email: 'fernando980504@gmail.com',
     phone: '(34)99246-5888',
-
     isTier1: true,
     isTier2: false,
     isTier3: false,
@@ -398,7 +386,6 @@ const LISTA_PLAYERS = const [
     age: 22,
     email: 'fernando980504@gmail.com',
     phone: '(34)99246-5888',
-
     isTier1: true,
     isTier2: false,
     isTier3: false,
@@ -427,7 +414,6 @@ const LISTA_PLAYERS = const [
     age: 22,
     email: 'fernando980504@gmail.com',
     phone: '(34)99246-5888',
-
     isTier1: true,
     isTier2: false,
     isTier3: false,

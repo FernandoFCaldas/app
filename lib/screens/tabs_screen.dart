@@ -14,11 +14,10 @@ class TabsScreen extends StatefulWidget {
 
 class _TabsScreenState extends State<TabsScreen> {
   
-
   int _selectScreenIndex = 0;
   final List<Map<String, Object>> _screens = [
     { 'title': 'Pro Dream', 'screen': GamesScreen()},
-    { 'title': 'Search', 'screen': FilterScreen(_filtroPlayers)},
+    { 'title': 'Search', 'screen': FilterScreen()},
     { 'title': 'Add', 'screen': AddPerfil()},
     { 'title': 'Favorites', 'screen': FavoritesScreen()},
     { 'title': 'Profile', 'screen': MeuPerfil()},

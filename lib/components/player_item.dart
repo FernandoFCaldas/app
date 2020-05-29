@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../models/perfildosplayers.dart';
-import '../data/listas_data.dart';
 import '../utils/app_routes.dart';
 
 class PlayerItem extends StatelessWidget {

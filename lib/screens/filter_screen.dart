@@ -3,10 +3,6 @@ import '../models/filtro.dart';
 
 class FilterScreen extends StatefulWidget {
 
-  final Function(Filtro) sempreQueMudarOsFiltros;
-
-  const FilterScreen(this.sempreQueMudarOsFiltros);
-
   @override
   _FilterScreenState createState() => _FilterScreenState();
 }
@@ -28,7 +24,7 @@ class _FilterScreenState extends State<FilterScreen> {
         value: value, 
         onChanged: (value) { 
           onChanged(value);
-          widget.sempreQueMudarOsFiltros(filtro);
+//          widget.sempreQueMudarOsFiltros(filtro);
         }
         );
     }
