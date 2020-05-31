@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Pro Dream',
       theme: ThemeData(
-        primaryColor: Colors.blue[900],
+        primaryColor: Colors.white,
       ),
       routes: {
         AppRoutes.HOME: (ctx) => TabsScreen(),

@@ -25,7 +25,6 @@ class PlayerItem extends StatelessWidget {
       child: InkWell(
             onTap: () => _selectPlayer(context),
             splashColor: Colors.white,
-            child: SingleChildScrollView(
             child: Card(
             elevation: 15,
                   child: ListTile(
@@ -49,7 +48,6 @@ class PlayerItem extends StatelessWidget {
             ),
           ),
         ),
-              ),
       ),
     );
   }

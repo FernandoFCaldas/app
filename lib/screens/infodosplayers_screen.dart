@@ -12,196 +12,385 @@ class InfoDosPlayers extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(perfilDosPlayers.title),
-        elevation: 0,
+        elevation: 15,
       ),
-      body: Column(
-        children: <Widget>[
-          Container(
-          height: 300,
-          width: MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(
-            color: Colors.blue[900],
-            borderRadius: BorderRadius.only(
-              bottomRight: Radius.circular(46),
-              bottomLeft: Radius.circular(46),
+      body: SingleChildScrollView(
+              child: Column(
+          children: <Widget>[
+            Card(
+              elevation: 15,
+              color: Colors.white,
+              child: Container(
+              height: 200,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 2.0),
+                child: Column(
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Image(
+                          width: 120,
+                          height: 120,
+                          image: NetworkImage('https://cenie.eu/sites/default/files/styles/thumbnail-380x214/public/pictures/picture-4811-1568215524.png?itok=QqZpUKQP'),
+                        )
+                      ],
+                    ),
+                    Text(
+                        'ID: 12345678',
+                        style: TextStyle(
+                        color: Colors.grey[400],
+                        fontFamily: 'Righteous',
+                        fontWeight: FontWeight.w400,
+                    ),
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                        'Fernando Ferreira',
+                        style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 25,
+                        fontFamily: 'Righteous',
+
+                      ),
+                      ),
+                      SizedBox(height: 2),
+                    Text(
+                        'Age: ${perfilDosPlayers.age}',
+                        style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 15,
+                        fontFamily: 'Righteous',
+
+                      ),
+                      ),
+                  ],
+                ),
+              ),
+                ),
             ),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.only(top: 2.0),
+              Padding(
+            padding: const EdgeInsets.only(top: 10.0),
             child: Column(
               children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                Card(
+              elevation: 15,
+              child: Container(
+              width: double.infinity,
+              color: Colors.white,
+              padding: EdgeInsets.all(10),
+              child: Row(
+                children: <Widget>[
+                  Column(
                   children: <Widget>[
-                    Image(
-                      width: 150,
-                      height: 150,
-                      image: NetworkImage('https://cenie.eu/sites/default/files/styles/thumbnail-380x214/public/pictures/picture-4811-1568215524.png?itok=QqZpUKQP'),
-                    )
+                    Icon(Icons.directions_car, color: Colors.blue),
                   ],
                 ),
-                Text(
-                    'ID: 12345678',
-                    style: TextStyle(
-                    color: Colors.white38,
-                    fontFamily: 'Righteous',
-                    fontWeight: FontWeight.w400,
+                SizedBox(width: 10),
+                  Column(
+                    children: <Widget>[
+                      Text(
+                          perfilDosPlayers.wcsText,
+                          style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.w400,fontSize: 14, fontFamily: 'Righteous'),
+                          ),
+                    ],
+                  ),
+                  SizedBox(width: 10),
+                  Column(
+                    children: <Widget>[
+                      Text(
+                          '(Would Change State to Play)',
+                          style: TextStyle(color: Colors.grey[400],fontWeight: FontWeight.w400,fontSize: 12, fontFamily: 'Righteous'),
+                          ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
                 ),
+            SizedBox(height: 10),
+                Card(
+              elevation: 15,
+              child: Container(
+              width: double.infinity,
+              color: Colors.white,
+              padding: EdgeInsets.all(10),
+              child: Row(
+                children: <Widget>[
+                  Column(
+                  children: <Widget>[
+                    Icon(Icons.airplanemode_active, color: Colors.blue),
+                  ],
                 ),
-                SizedBox(height: 5),
-                Text(
-                    'Fernando Ferreira',
-                    style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 25,
-                    fontFamily: 'Righteous',
-
+                SizedBox(width: 10),
+                  Column(
+                    children: <Widget>[
+                      Text(
+                          perfilDosPlayers.wccText,
+                          style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.w400,fontSize: 14, fontFamily: 'Righteous'),
+                          ),
+                    ],
                   ),
+                  SizedBox(width: 10),
+                  Column(
+                    children: <Widget>[
+                      Text(
+                          '(Would Change Country to Play)',
+                          style: TextStyle(color: Colors.grey[400],fontWeight: FontWeight.w400,fontSize: 12, fontFamily: 'Righteous'),
+                          ),
+                    ],
                   ),
-                  SizedBox(height: 2),
-                Text(
-                    'Age: ${perfilDosPlayers.age}',
-                    style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 15,
-                    fontFamily: 'Righteous',
-
+                ],
+              ),
+            ),
+                ),
+            SizedBox(height: 10),
+                  Card(
+              elevation: 15,
+              child: Container(
+              width: double.infinity,
+              color: Colors.white,
+              padding: EdgeInsets.all(10),
+              child: Row(
+                children: <Widget>[
+                  Column(
+                  children: <Widget>[
+                    Icon(Icons.live_tv, color: Colors.blue),
+                  ],
+                ),
+                SizedBox(width: 10),
+                  Column(
+                    children: <Widget>[
+                      Text(
+                        perfilDosPlayers.streamerText,
+                        style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.w400,fontSize: 14, fontFamily: 'Righteous'),
+                        ),
+                    ],
                   ),
+                ],
+              ),
+            ),
                   ),
-                  SizedBox(height: 35),
-                  Text(
-                    'e-mail: ${perfilDosPlayers.email}',
-                    style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 15,
-                    fontFamily: 'Righteous',
-
+            SizedBox(height: 10),
+                  Card(
+              elevation: 15,
+              child: Container(
+              width: double.infinity,
+              color: Colors.white,
+              padding: EdgeInsets.all(10),
+              child: Row(
+                children: <Widget>[
+                  Column(
+                  children: <Widget>[
+                    Icon(Icons.poll, color: Colors.blue),
+                  ],
+                ),
+                SizedBox(width: 10),
+                  Column(
+                    children: <Widget>[
+                      Text(
+                        perfilDosPlayers.tierText,
+                        style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.w400,fontSize: 14, fontFamily: 'Righteous'),
+                        ),
+                    ],
                   ),
+                ],
+              ),
+            ),
                   ),
-              ],
+            SizedBox(height: 10),
+                  Card(
+              elevation: 15,
+              child: Container(
+              width: double.infinity,
+              color: Colors.white,
+              padding: EdgeInsets.all(10),
+              child: Row(
+                children: <Widget>[
+                  Column(
+                  children: <Widget>[
+                    Icon(Icons.headset_mic, color: Colors.blue),
+                  ],
+                ),
+                SizedBox(width: 10),
+                  Column(
+                    children: <Widget>[
+                      Text(
+                        perfilDosPlayers.englishText,
+                        style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.w400,fontSize: 14, fontFamily: 'Righteous'),
+                        ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+                  ),
+            SizedBox(height: 10),
+                  Card(
+              elevation: 15,
+              child: Container(
+              width: double.infinity,
+              color: Colors.white,
+              padding: EdgeInsets.all(10),
+              child: Row(
+                children: <Widget>[
+                  Column(
+                  children: <Widget>[
+                    Icon(Icons.flag, color: Colors.blue),
+                  ],
+                ),
+                SizedBox(width: 10),
+                  Column(
+                    children: <Widget>[
+                      Text(
+                        'Country: Brazil',
+                        style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.w400,fontSize: 14, fontFamily: 'Righteous'),
+                        ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+                  ),
+              SizedBox(height: 10),
+                  Card(
+              elevation: 15,
+              child: Container(
+              width: double.infinity,
+              color: Colors.white,
+              padding: EdgeInsets.all(10),
+              child: Row(
+                children: <Widget>[
+                  Column(
+                  children: <Widget>[
+                    Icon(Icons.satellite, color: Colors.blue),
+                  ],
+                ),
+                SizedBox(width: 10),
+                  Column(
+                    children: <Widget>[
+                      Text(
+                        'State: ',
+                        style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.w400,fontSize: 14, fontFamily: 'Righteous'),
+                        ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+                  ),
+              SizedBox(height: 10),
+                  Card(
+              elevation: 15,
+              child: Container(
+              width: double.infinity,
+              color: Colors.white,
+              padding: EdgeInsets.all(10),
+              child: Row(
+                children: <Widget>[
+                  Column(
+                  children: <Widget>[
+                    Icon(Icons.store_mall_directory, color: Colors.blue),
+                  ],
+                ),
+                SizedBox(width: 10),
+                  Column(
+                    children: <Widget>[
+                      Text(
+                        'City:',
+                        style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.w400,fontSize: 14, fontFamily: 'Righteous'),
+                        ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+                  ),
+            SizedBox(height: 10),
+                  Card(
+              elevation: 15,
+              child: Container(
+              width: double.infinity,
+              color: Colors.white,
+              padding: EdgeInsets.all(10),
+              child: Row(
+                children: <Widget>[
+                  Column(
+                  children: <Widget>[
+                    Icon(Icons.mail, color: Colors.blue),
+                  ],
+                ),
+                SizedBox(width: 10),
+                  Column(
+                    children: <Widget>[
+                      Text(
+                        'E-mail: ${perfilDosPlayers.email}',
+                        style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.w400,fontSize: 14, fontFamily: 'Righteous'),
+                        ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+                  ),
+              SizedBox(height: 10),
+                  Card(
+              elevation: 15,
+              child: Container(
+              width: double.infinity,
+              color: Colors.white,
+              padding: EdgeInsets.all(10),
+              child: Row(
+                children: <Widget>[
+                  Column(
+                  children: <Widget>[
+                    Icon(Icons.phone_android, color: Colors.blue),
+                  ],
+                ),
+                SizedBox(width: 10),
+                  Column(
+                    children: <Widget>[
+                      Text(
+                        'Phone: ${perfilDosPlayers.phone}',
+                        style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.w400,fontSize: 14, fontFamily: 'Righteous'),
+                        ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+                  ),
+            SizedBox(height: 20),
+            Container(
+            child: Center(
+              child: Text(
+                'We always recommend checking the data on the game platform before contacting.',
+                style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.w400,fontSize: 9, fontFamily: 'Righteous'),
+                ),
             ),
           ),
-            ),
-          Container(
-            height: 200,
-            padding: EdgeInsets.only(top: 40),
-            child: Column(
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Icon(Icons.directions_car, color: Colors.blue,),
-                        Text(
-                      perfilDosPlayers.wcsText,
-                      style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 15,
-                      fontFamily: 'Righteous',
-                          ),
-                        ),
-                        Text('(Would you change state to play)', style: TextStyle(color: Colors.grey, fontSize: 9),),  
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        Icon(Icons.airplanemode_active, color: Colors.blue,),
-                        Text(
-                      perfilDosPlayers.wccText,
-                      style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 15,
-                      fontFamily: 'Righteous',
-                          ),
-                        ),
-                        Text('(Would you change country to play)', style: TextStyle(color: Colors.grey, fontSize: 9),),
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        Icon(Icons.airplay, color: Colors.blue,),
-                        Text(
-                      perfilDosPlayers.streamerText,
-                      style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 15,
-                      fontFamily: 'Righteous',
-                          ),
-                        ),
-                        Text('(Would you change country to play)', style: TextStyle(color: Colors.white, fontSize: 7),),
-                      ],
-                    ),
-                  ],
-                ),
-                Spacer(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Icon(Icons.poll, color: Colors.blue,),
-                        Text(
-                      perfilDosPlayers.tierText,
-                      style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 15,
-                      fontFamily: 'Righteous',
-                          ),
-                        ),
-                        Text('(Would you change country to play)', style: TextStyle(color: Colors.white, fontSize: 9),),
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        Icon(Icons.speaker_notes, color: Colors.blue,),
-                        Text(
-                      perfilDosPlayers.englishText,
-                      style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 15,
-                      fontFamily: 'Righteous',
-                          ),
-                        ),
-                        Text('(Would you change country to play)', style: TextStyle(color: Colors.white, fontSize: 9),),
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        Icon(Icons.flag, color: Colors.blue,),
-                        Text(
-                      'Brazil',
-                      style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 15,
-                      fontFamily: 'Righteous',
-                          ),
-                        ),
-                        Text('(Would you change country to play)', style: TextStyle(color: Colors.white, fontSize: 7),),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
+          SizedBox(height: 20),
+            
+            ],
           ),
-        ],
+              ), 
+          ],
+        ),
       ),
-    floatingActionButton: FloatingActionButton(
+    /*floatingActionButton: FloatingActionButton(
       child: Icon(Icons.favorite),
       onPressed: () {
         Navigator.of(context).pop(perfilDosPlayers.title);
       },
     ),
+    */
     );
   }
 }
