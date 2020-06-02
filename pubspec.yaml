@@ -263,6 +263,36 @@ flutter:
     - assets/flags/yemen-flag-icon-32.png
     - assets/flags/zambia-flag-icon-32.png
     - assets/flags/zimbabwe-flag-icon-32.png
+    - assets/images_profile/logo_option_1.png
+    - assets/images_profile/logo_option_2.png
+    - assets/images_profile/logo.png
+    - assets/images_profile/logo_option_3.png
+    - assets/images_profile/logo_option_4.png
+    - assets/images_profile/logo_option_5.png
+    - assets/images_profile/logo_option_6.png
+    - assets/images_profile/logo_option_7.png
+    - assets/images_profile/logo_option_8.png
+    - assets/images_profile/logo_option_9.png
+    - assets/images_profile/logo_option_10.png
+    - assets/images_profile/logo_option_11.png
+    - assets/images_profile/logo_option_12.png
+    - assets/images_profile/logo_option_13.png
+    - assets/images_profile/logo_option_14.png
+    - assets/images_profile/logo_option_15.png
+    - assets/images_profile/logo_option_16.png
+    - assets/images_profile/logo_option_17.png
+    - assets/images_profile/logo_option_18.png
+    - assets/images_profile/logo_option_19.png
+    - assets/images_profile/logo_option_20.png
+    - assets/images_profile/logo_option_21.png
+    - assets/images_profile/logo_option_22.png
+    - assets/images_profile/logo_option_23.png
+    - assets/images_profile/logo_option_24.png
+    - assets/images_profile/logo_option_25.png
+    - assets/images_profile/logo_option_26.png
+    - assets/images_profile/logo_option_27.png
+    - assets/images_profile/logo_option_28.png
+
 
     
 
@@ -285,12 +315,14 @@ flutter:
         - asset: assets/fonts/OpenSans-Light.ttf
         - asset: assets/fonts/OpenSans-Regular.ttf
         - asset: assets/fonts/OpenSans-SemiBold.ttf
-    - family: Merriweather
+    - family: Roboto
       fonts:
-        - asset: assets/fonts/Merriweather-Black.ttf
-        - asset: assets/fonts/Merriweather-Bold.ttf
-        - asset: assets/fonts/Merriweather-Regular.ttf
-        - asset: assets/fonts/Merriweather-Light.ttf 
+        - asset: assets/fonts/Roboto-Black.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Light.ttf
+        - asset: assets/fonts/Roboto-Medium.ttf
+        - asset: assets/fonts/Roboto-Thin.ttf
     - family: Righteous
       fonts:
         - asset: assets/fonts/Righteous-Regular.ttf

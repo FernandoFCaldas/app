@@ -34,8 +34,11 @@ class _TabsScreenState extends State<TabsScreen> {
     return Scaffold(
           appBar: AppBar(
             elevation: 15,
-            leading: Image.asset('assets/icon/iconetacatransparente.png',),
-            title: Text(_screens[_selectScreenIndex]['title'], style: TextStyle(color: Colors.grey[600], fontFamily: 'Righteous', fontWeight: FontWeight.w400,),),
+            leading: Padding(
+              padding: const EdgeInsets.only(top: 10.0, bottom: 10.0, left: 10.0),
+              child: Image.asset('assets/images_profile/logo_option_2.png',),
+            ),
+            title: Text(_screens[_selectScreenIndex]['title'], style: TextStyle(color: Colors.black, fontFamily: 'Righteous', fontWeight: FontWeight.w400,),),
           ),
           body: _screens[_selectScreenIndex]['screen'],
           bottomNavigationBar: BottomNavigationBar(
@@ -47,28 +50,28 @@ class _TabsScreenState extends State<TabsScreen> {
             items: [
               BottomNavigationBarItem(
                 backgroundColor: Colors.white,
-                icon: Icon(Icons.home, color: Colors.grey[600]),
-                title: Text('Home', style: TextStyle(fontFamily: 'Righteous', fontWeight: FontWeight.w400, color: Colors.grey[600])),
+                icon: Icon(Icons.home, color: Colors.black),
+                title: Text('Home', style: TextStyle(fontFamily: 'Roboto', fontWeight: FontWeight.w400, color: Colors.black)),
              ),
              BottomNavigationBarItem(
                backgroundColor: Colors.white,
-                icon: Icon(Icons.search, color: Colors.grey[600],),
-                title: Text('Search', style: TextStyle(fontFamily: 'Righteous', fontWeight: FontWeight.w400, color: Colors.grey[600])),
+                icon: Icon(Icons.search, color: Colors.black,),
+                title: Text('Search', style: TextStyle(fontFamily: 'Righteous', fontWeight: FontWeight.w400, color: Colors.black)),
              ),
              BottomNavigationBarItem(
                backgroundColor: Colors.white,
-                icon: Icon(Icons.add, color: Colors.grey[600],),
-                title: Text('Add', style: TextStyle(fontFamily: 'Righteous', fontWeight: FontWeight.w400, color: Colors.grey[600])),
+                icon: Icon(Icons.add, color: Colors.black,),
+                title: Text('Add', style: TextStyle(fontFamily: 'Righteous', fontWeight: FontWeight.w400, color: Colors.black)),
              ),
              BottomNavigationBarItem(
                backgroundColor: Colors.white,
-                icon: Icon(Icons.favorite, color: Colors.grey[600],),
-                title: Text('Favorites', style: TextStyle(fontFamily: 'Righteous', fontWeight: FontWeight.w400, color: Colors.grey[600])),
+                icon: Icon(Icons.favorite, color: Colors.black,),
+                title: Text('Favorites', style: TextStyle(fontFamily: 'Righteous', fontWeight: FontWeight.w400, color: Colors.black)),
              ),
              BottomNavigationBarItem(
                backgroundColor: Colors.white,
-                icon: Icon(Icons.person, color: Colors.grey[600],),
-                title: Text('Profile', style: TextStyle(fontFamily: 'Righteous', fontWeight: FontWeight.w400, color: Colors.grey[600])),
+                icon: Icon(Icons.person, color: Colors.black,),
+                title: Text('Profile', style: TextStyle(fontFamily: 'Righteous', fontWeight: FontWeight.w400, color: Colors.black)),
              ),
           ],
         ),

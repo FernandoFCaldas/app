@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'infodosplayers_screen.dart';
+import '../components/country_flag_list.dart';
+import '../components/images_profile.dart';
 
 /* usar dps pra por icone
 Column(
@@ -9,7 +11,16 @@ IconButton(icon: Icon(Icons.edit, color: Colors.blue), onPressed: null),
 ),
 */
 
-class MeuPerfil extends StatelessWidget {
+class MeuPerfil extends StatefulWidget {
+  @override
+  _MeuPerfilState createState() => _MeuPerfilState();
+}
+
+class _MeuPerfilState extends State<MeuPerfil> {
+
+  ImagesProfile selectedImage;
+
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -18,26 +29,52 @@ class MeuPerfil extends StatelessWidget {
         Card(
           elevation: 15,
           child: Container(
-          height: 230,
+          height: 280,
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.circular(0),
           ),
           child: Padding(
-            padding: const EdgeInsets.only(top: 0.0),
+            padding: const EdgeInsets.only(top: 10.0),
             child: Column(
               children: <Widget>[
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Image(
-                      width: 150,
-                      height: 150,
-                      image: NetworkImage('https://cenie.eu/sites/default/files/styles/thumbnail-380x214/public/pictures/picture-4811-1568215524.png?itok=QqZpUKQP'),
-                    )
+                    GestureDetector(
+                  onTap: () async {
+                    var resultImage = await showModalBottomSheet(
+                      context: context,
+                      isScrollControlled: true,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(0),
+                      ),
+                      builder: (BuildContext context) => ImagesProfileSelectList(),
+                    );
+
+                    if (resultImage is ImagesProfile) {
+                      setState(() {
+                        this.selectedImage = resultImage;
+                      });
+                    }
+                  },
+                  child: Card(
+                    elevation: 0,
+                        child: Container(
+                        width: 170,
+                        height: 170,
+                        decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black12, width: 1,),),
+                        child: Padding(
+                          padding: const EdgeInsets.all(0.0),
+                          child: getSelectedImageWidget(),
+                        )),
+                  ),
+                ),
                   ],
                 ),
+                SizedBox(height: 5,),
                 Text(
                     'ID: 12345678',
                     style: TextStyle(
@@ -276,4 +313,17 @@ class MeuPerfil extends StatelessWidget {
         ),
     );
   }
-}
+  Widget getSelectedImageWidget() {
+    if (selectedImage == null) {
+      return Center(child: Text("+", style: TextStyle(fontSize: 30),));
+    }
+    
+    return Center(
+      child: Image.asset(
+      selectedImage.imagesprofile,
+      width: 150,
+      height: 150,
+      ),
+    );
+    }
+  }

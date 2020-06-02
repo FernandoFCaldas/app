@@ -11,7 +11,7 @@ class InfoDosPlayers extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(perfilDosPlayers.title),
+        title: Text(perfilDosPlayers.nickname),
         elevation: 15,
       ),
       body: SingleChildScrollView(
@@ -21,26 +21,27 @@ class InfoDosPlayers extends StatelessWidget {
               elevation: 15,
               color: Colors.white,
               child: Container(
-              height: 200,
+              height: 230,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Padding(
-                padding: const EdgeInsets.only(top: 2.0),
+                padding: const EdgeInsets.only(top: 10.0),
                 child: Column(
                   children: <Widget>[
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Image(
+                        Image.asset(
+                          'assets/images_profile/logo_option_3.png',
                           width: 120,
                           height: 120,
-                          image: NetworkImage('https://cenie.eu/sites/default/files/styles/thumbnail-380x214/public/pictures/picture-4811-1568215524.png?itok=QqZpUKQP'),
                         )
                       ],
                     ),
+                    SizedBox(height: 5,),
                     Text(
                         'ID: 12345678',
                         style: TextStyle(

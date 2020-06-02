@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/filtro.dart';
+import 'add_screen.dart';
 
 class FilterScreen extends StatefulWidget {
 
@@ -44,6 +45,7 @@ class _FilterScreenState extends State<FilterScreen> {
               ),
           ),
         ),
+        
         Expanded(child: ListView(
           children: <Widget>[
             _createSwitch(

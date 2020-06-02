@@ -70,6 +70,11 @@ const LISTA_JOGOS = const [
     iconAsset: 'assets/icon/iconemobilelegends.png',
   ),
   Jogo(
+    id: 'overwatch',
+    title: 'Overwatch',
+    iconAsset: 'assets/icon/iconeoverwatch.png',
+  ),
+  Jogo(
     id: 'pubg',
     title: 'PUBG',
     iconAsset: 'assets/icon/iconepubg.png',
@@ -95,7 +100,7 @@ const LISTA_PLAYERS = const [
   PerfilDosPlayers(
     id: 'm1',
     listaDeIDs: ['arenaofvalor'],
-    title: 'Shirt 10',
+    nickname: 'Shirt 10',
     realname: 'Fernando Ferreira',
     tier: Tier.T1,
     //country: Country.Brazil,
@@ -121,7 +126,7 @@ const LISTA_PLAYERS = const [
   PerfilDosPlayers(
     id: 'm1',
     listaDeIDs: ['brawlstars'],
-    title: 'Shirt 10',
+    nickname: 'Shirt 10',
     realname: 'Fernando Ferreira',
     tier: Tier.T1,
     //country: Country.Brazil,
@@ -147,7 +152,7 @@ const LISTA_PLAYERS = const [
   PerfilDosPlayers(
     id: 'm1',
     listaDeIDs: ['clashroyale'],
-    title: 'Shirt 10',
+    nickname: 'Shirt 10',
     realname: 'Fernando Ferreira',
     tier: Tier.T1,
     //country: Country.Brazil,
@@ -173,7 +178,7 @@ const LISTA_PLAYERS = const [
   PerfilDosPlayers(
     id: 'm1',
     listaDeIDs: ['csgo'],
-    title: 'Shirt 10',
+    nickname: 'Shirt 10',
     realname: 'Fernando Ferreira',
     tier: Tier.T1,
     //country: Country.Brazil,
@@ -199,7 +204,7 @@ const LISTA_PLAYERS = const [
   PerfilDosPlayers(
     id: 'm1',
     listaDeIDs: ['dota2'],
-    title: 'Shirt 10',
+    nickname: 'Shirt 10',
     realname: 'Fernando Ferreira',
     tier: Tier.T1,
     //country: Country.Brazil,
@@ -225,7 +230,7 @@ const LISTA_PLAYERS = const [
   PerfilDosPlayers(
     id: 'm1',
     listaDeIDs: ['fortnite'],
-    title: 'Shirt 10',
+    nickname: 'Shirt 10',
     realname: 'Fernando Ferreira',
     tier: Tier.T1,
     //country: Country.Brazil,
@@ -251,7 +256,7 @@ const LISTA_PLAYERS = const [
   PerfilDosPlayers(
     id: 'm1',
     listaDeIDs: ['freefire'],
-    title: 'Shirt 10',
+    nickname: 'Shirt 10',
     realname: 'Fernando Ferreira',
     tier: Tier.T1,
     //country: Country.Brazil,
@@ -277,7 +282,7 @@ const LISTA_PLAYERS = const [
   PerfilDosPlayers(
     id: 'm1',
     listaDeIDs: ['lol'],
-    title: 'Shirt 10',
+    nickname: 'Shirt 10',
     realname: 'Fernando Ferreira',
     tier: Tier.T1,
     //country: Country.Brazil,
@@ -303,7 +308,7 @@ const LISTA_PLAYERS = const [
   PerfilDosPlayers(
     id: 'm1',
     listaDeIDs: ['pubg'],
-    title: 'Shirt 10',
+    nickname: 'Shirt 10',
     realname: 'Fernando Ferreira',
     tier: Tier.T1,
     //country: Country.Brazil,
@@ -329,7 +334,7 @@ const LISTA_PLAYERS = const [
   PerfilDosPlayers(
     id: 'm1',
     listaDeIDs: ['tft'],
-    title: 'Shirt 10',
+    nickname: 'Shirt 10',
     realname: 'Fernando Ferreira',
     tier: Tier.T1,
     //country: Country.Brazil,
@@ -355,7 +360,7 @@ const LISTA_PLAYERS = const [
   PerfilDosPlayers(
     id: 'm1',
     listaDeIDs: ['vainglory'],
-    title: 'Shirt 10',
+    nickname: 'Shirt 10',
     realname: 'Fernando Ferreira',
     tier: Tier.T1,
     //country: Country.Brazil,
@@ -381,7 +386,7 @@ const LISTA_PLAYERS = const [
   PerfilDosPlayers(
     id: 'm1',
     listaDeIDs: ['valorant'],
-    title: 'Shirt 10',
+    nickname: 'Shirt 10',
     realname: 'Fernando Ferreira',
     tier: Tier.T1,
     //country: Country.Brazil,

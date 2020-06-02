@@ -30,7 +30,7 @@ enum English {
 class PerfilDosPlayers {
 
   final String id;
-  final String title;
+  final String nickname;
   final List<String> listaDeIDs;
   final String realname;
   final String email;
@@ -56,7 +56,7 @@ class PerfilDosPlayers {
 
   const PerfilDosPlayers ({
     @required this.id,
-    @required this.title,
+    @required this.nickname,
     @required this.email,
     @required this.realname,
     @required this.english,
