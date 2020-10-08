@@ -1,9 +1,6 @@
-import 'package:ProDreamAPP/models/perfildosplayers.dart';
+
 import 'package:flutter/material.dart';
 import '../data/listas_data.dart';
-import '../components/jogo_item.dart';
-import 'perfildosplayers.dart';
-import '../screens/infodosplayers_screen.dart';
 
 class Jogo {
   final String id;
@@ -44,7 +41,7 @@ class _JogoSelectListState extends State<JogoSelectList> {
                   width: 30,
                 ),
                 SizedBox(width: 10),
-                Text(jogo.title)
+                Text(jogo.id)
               ]),
             )),
           );

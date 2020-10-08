@@ -21,8 +21,12 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  characters: ^1.0.0
   flutter:
     sdk: flutter
+  http:
+  provider:
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -68,6 +72,9 @@ flutter:
     - assets/icon/iconeoverwatch.png
     - assets/icon/iconetaca.png
     - assets/icon/iconetacatransparente.png
+    - assets/icon/iconepaladins.png
+    - assets/icon/iconespellbreak.png
+    - assets/icon/iconerocketleague.png
     - assets/flags/afghanistan-flag-icon-32.png
     - assets/flags/albania-flag-icon-32.png
     - assets/flags/algeria-flag-icon-32.png

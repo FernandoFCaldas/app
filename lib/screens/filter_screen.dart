@@ -1,34 +1,42 @@
 import 'package:flutter/material.dart';
 import '../models/filtro.dart';
-import 'add_screen.dart';
+import '../components/country_flag_list.dart';
 
 class FilterScreen extends StatefulWidget {
-
   @override
   _FilterScreenState createState() => _FilterScreenState();
 }
 
 class _FilterScreenState extends State<FilterScreen> {
+  Country selectedCountry;
 
   var filtro = Filtro();
 
-  Widget 
-  _createSwitch(
-    String title, 
-    String subtitle, 
-    bool value, 
+  Widget _createSwitch(
+    String title,
+    String subtitle,
+    bool value,
     Function(bool) onChanged,
-    ) {
-      return SwitchListTile.adaptive(
-        title: Text(title, style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 15, fontFamily: 'OpenSans')),
-        subtitle: Text(subtitle, style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w400,fontSize: 12, fontFamily: 'Righteous')),
-        value: value, 
-        onChanged: (value) { 
+  ) {
+    return SwitchListTile.adaptive(
+        title: Text(title,
+            style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+                fontFamily: 'OpenSans')),
+        subtitle: Text(subtitle,
+            style: TextStyle(
+                color: Colors.grey,
+                fontWeight: FontWeight.w400,
+                fontSize: 12,
+                fontFamily: 'Righteous')),
+        value: value,
+        onChanged: (value) {
           onChanged(value);
 //          widget.sempreQueMudarOsFiltros(filtro);
-        }
-        );
-    }
+        });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +49,60 @@ class _FilterScreenState extends State<FilterScreen> {
           child: Center(
             child: Text(
               'Find your perfect player',
-              style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400,fontSize: 18, fontFamily: 'Righteous'),
-              ),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 18,
+                  fontFamily: 'Righteous'),
+            ),
           ),
         ),
-        
-        Expanded(child: ListView(
+        Padding(
+          padding: const EdgeInsets.all(3.0),
+          child: Row(
+            children: <Widget>[
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 5),
+                  GestureDetector(
+                    onTap: () async {
+                      var result = await showModalBottomSheet(
+                        context: context,
+                        isScrollControlled: true,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            topRight: Radius.circular(10),
+                          ),
+                        ),
+                        builder: (BuildContext context) => CountrySelectList(),
+                      );
+
+                      if (result is Country) {
+                        setState(() {
+                          this.selectedCountry = result;
+                        });
+                      }
+                    },
+                    child: Container(
+                        width: MediaQuery.of(context).size.width / 1.02,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey, width: 2),
+                            borderRadius: BorderRadius.circular(5)),
+                        child: Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: getSelectedCountryWidget(),
+                        )),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+            child: ListView(
           children: <Widget>[
             _createSwitch(
               'Tier 01:',
@@ -111,7 +167,30 @@ class _FilterScreenState extends State<FilterScreen> {
           ],
         ))
       ],
-      
     );
+  }
+
+  Widget getSelectedCountryWidget() {
+    if (selectedCountry == null) {
+      return Center(
+          child: Text(
+        "All countries",
+        style: TextStyle(fontSize: 15, fontFamily: 'Roboto'),
+      ));
+    }
+
+    return Row(children: [
+      Image.asset(
+        selectedCountry.flag,
+        width: 20,
+        height: 20,
+      ),
+      SizedBox(width: 10),
+      Center(
+          child: Text(
+        selectedCountry.name,
+        style: TextStyle(fontSize: 15),
+      )),
+    ]);
   }
 }

@@ -56,22 +56,22 @@ class _TabsScreenState extends State<TabsScreen> {
              BottomNavigationBarItem(
                backgroundColor: Colors.white,
                 icon: Icon(Icons.search, color: Colors.black,),
-                title: Text('Search', style: TextStyle(fontFamily: 'Righteous', fontWeight: FontWeight.w400, color: Colors.black)),
+                title: Text('Search', style: TextStyle(fontFamily: 'Roboto', fontWeight: FontWeight.w400, color: Colors.black)),
              ),
              BottomNavigationBarItem(
                backgroundColor: Colors.white,
                 icon: Icon(Icons.add, color: Colors.black,),
-                title: Text('Add', style: TextStyle(fontFamily: 'Righteous', fontWeight: FontWeight.w400, color: Colors.black)),
+                title: Text('Add', style: TextStyle(fontFamily: 'Roboto', fontWeight: FontWeight.w400, color: Colors.black)),
              ),
              BottomNavigationBarItem(
                backgroundColor: Colors.white,
                 icon: Icon(Icons.favorite, color: Colors.black,),
-                title: Text('Favorites', style: TextStyle(fontFamily: 'Righteous', fontWeight: FontWeight.w400, color: Colors.black)),
+                title: Text('Favorites', style: TextStyle(fontFamily: 'Roboto', fontWeight: FontWeight.w400, color: Colors.black)),
              ),
              BottomNavigationBarItem(
                backgroundColor: Colors.white,
                 icon: Icon(Icons.person, color: Colors.black,),
-                title: Text('Profile', style: TextStyle(fontFamily: 'Righteous', fontWeight: FontWeight.w400, color: Colors.black)),
+                title: Text('Profile', style: TextStyle(fontFamily: 'Roboto', fontWeight: FontWeight.w400, color: Colors.black)),
              ),
           ],
         ),
